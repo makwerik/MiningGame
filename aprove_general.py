@@ -18,7 +18,7 @@ class MiningBot:
         options = webdriver.FirefoxOptions()
         options.add_argument(f"User-Agent={useragent.random}")
         options.add_argument('--headless')
-        self.cookie = pickle.load(open(f'cookies/{name}', 'rb'))
+        self.cookie = pickle.load(open(f'{name}', 'rb'))
         self.driver = webdriver.Firefox(options=options)
         self.wait = WebDriverWait(self.driver, 1260)
         self.wait_confirm = WebDriverWait(self.driver, 5)
